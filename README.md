@@ -1,9 +1,8 @@
 # {{ Your Puzzle Name }} base on Tempus-Pico
-
-This is a template for building RP2040 based puzzles that use the Tempus Pico Library to connect to the Tempus Clue System
-
 This repo should be cloned with `--recursive` or `git submodule update --init --recursive` should be ran after clone it setup all the submodules
 
+# Template
+This is a template for building RP2040 based puzzles that use the Tempus Pico Library to connect to the Tempus Clue System.  
 Update the following variables in the `tempus_pico_puzzle.cpp` file:-  
 
 ```c
@@ -13,6 +12,8 @@ const char *component_name = "TemplateRoomPuzzle";  // max length NAME_STRING_SI
 // optional define a PuzzleData store
 const char *store_name = "template-room:puzzle";    // max length STORE_NAME_STRING_SIZE
 ```
+
+You can also update the `set(NAME tempus_pico_puzzle)` in the top level `CMakeLisits.txt` and rename the `src/*_main.cpp` file to match
 
 # Build
 The pico-sdk needs to be cloned separately and it's path set in your environment.
