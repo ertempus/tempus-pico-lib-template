@@ -32,7 +32,7 @@ const char *store_name = "template-room:puzzle";            // max length STORE_
 
 // Standard Task priority
 #define MAIN_TASK_STACK_SIZE (1024 * 2)
-static const char *MAIN_TASK_NAME = "TempusThread";
+static const char *MAIN_TASK_NAME = "MainThread";
 #define MAIN_TASK_PRIORITY ( tskIDLE_PRIORITY + 1UL )
 
 void led_init() {
