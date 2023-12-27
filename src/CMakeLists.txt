@@ -1,5 +1,5 @@
 add_executable(${NAME}
-    tempus_pico_puzzle_main.cpp
+    ${NAME}_main.cpp
 )
 
 # Add pico_stdlib library which aggregates commonly used features
