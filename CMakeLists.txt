@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
-set(NAME tempus_pico_template)
+set(NAME tempus_pico_puzzle)
 
 # initialize the SDK based on PICO_SDK_PATH
 # note: this must happen before project()
