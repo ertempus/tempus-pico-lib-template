@@ -2,6 +2,14 @@ cmake_minimum_required(VERSION 3.13)
 
 set(NAME tempus_pico_puzzle)
 
+# Set the following to build for wifi
+# set(PICO_BOARD "pico_w")
+# set(WIFI_SSID "")
+# set(WIFI_PASSWORD "")
+
+# Set the following to override the Clue System host
+# set(CLUESYSTEM_HOST "tempus.local")
+
 # initialize the SDK based on PICO_SDK_PATH
 # note: this must happen before project()
 include(pico_sdk_import.cmake)

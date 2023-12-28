@@ -36,12 +36,18 @@ static const char *MAIN_TASK_NAME = "MainThread";
 #define MAIN_TASK_PRIORITY ( tskIDLE_PRIORITY + 1UL )
 
 void led_init() {
+    #ifndef RASPBERRYPI_PICO_W
     gpio_init(PICO_DEFAULT_LED_PIN);
     gpio_set_dir(PICO_DEFAULT_LED_PIN, GPIO_OUT);
+    #endif
 }
 
 void led_toggle() {
+    #ifdef RASPBERRYPI_PICO_W
+    cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, ! cyw43_arch_gpio_get(CYW43_WL_GPIO_LED_PIN));
+    #else
     gpio_put(PICO_DEFAULT_LED_PIN, ! gpio_get(PICO_DEFAULT_LED_PIN));
+    #endif
 }
 
 void main_task(void *params)

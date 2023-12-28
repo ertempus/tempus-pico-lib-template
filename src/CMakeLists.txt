@@ -12,9 +12,11 @@ target_include_directories(${NAME} PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}
 )
 
+if(DEFINED CLUESYSTEM_HOST)
 target_compile_definitions(${NAME} PRIVATE
-    # CONFIG_TEMPUS_CLUESYSTEM_HOST="tempus.local"
+    CONFIG_TEMPUS_CLUESYSTEM_HOST=\"${CLUESYSTEM_HOST}\"
 )
+endif()
 
 pico_enable_stdio_usb(${NAME} 1)
 pico_enable_stdio_uart(${NAME} 0)
