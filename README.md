@@ -68,9 +68,9 @@ picotool load -f src/tempus_pico_puzzle.uf2
 # Puzzle Data
 Store Name `template-room:puzzle`
 
-| Key           | Type    | Default          | Notes                            |
-|---------------|---------|------------------|----------------------------------|
-|               |         |                  |                                  |
+| Key           | Type   | Default           | Notes                            |
+|---------------|--------|-------------------|----------------------------------|
+|               |        |                   |                                  |
 
 # Custom Puzzle Topics
 These topics are prefixed by `tempus/room/{room_slug}/puzzle/{component_name}/`  
@@ -78,9 +78,9 @@ Topic max length is 50 (`PUZZLE_CUSTOM_TOPIC_SIZE`)
 Payload should be json.  
 A maximum of 2 subscribes are allowed by default (`CONFIG_MQTT_MAX_PUZZLE_CUSTOM_SUBSCRIBES`)
 
-| Topic                         | Value Usage                                   |
-|-------------------------------|-----------------------------------------------|
-|                               |                                               |
+| Topic             | S/P | Value / Usage                                       |
+|-------------------|-----|-----------------------------------------------------|
+|                   |     |                                                     |
 
 # Logic
 TODO
