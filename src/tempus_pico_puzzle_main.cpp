@@ -34,6 +34,7 @@ const char *store_name = "template-room:puzzle";            // max length STORE_
 #define MAIN_TASK_STACK_SIZE (1024 * 2)
 static const char *MAIN_TASK_NAME = "MainThread";
 #define MAIN_TASK_PRIORITY ( tskIDLE_PRIORITY + 1UL )
+static TaskHandle_t _main_task_handle;
 
 void led_init() {
     #ifndef RASPBERRYPI_PICO_W
@@ -50,8 +51,7 @@ void led_toggle() {
     #endif
 }
 
-void main_task(void *params)
-{
+void main_task(void *params) {
     printf("Main task: start\n");
     tempus_setup(room_slug, component_name);
     while (! tempus_is_mqtt_connected()) {
@@ -67,11 +67,8 @@ void main_task(void *params)
     }
 }
 
-void vLaunch()
-{
-    TaskHandle_t task;
-
-    xTaskCreate(main_task, MAIN_TASK_NAME, MAIN_TASK_STACK_SIZE, NULL, MAIN_TASK_PRIORITY, &task);
+void vLaunch() {
+    xTaskCreate(main_task, MAIN_TASK_NAME, MAIN_TASK_STACK_SIZE, NULL, MAIN_TASK_PRIORITY, &_main_task_handle);
 
     // more tasks, they can set vTaskCoreAffinitySet if needed
 

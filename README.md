@@ -33,34 +33,44 @@ picotool load -f src/tempus_pico_puzzle.uf2
 
 # Pins
 
-| Pin  | Alt use    | Usage            | Notes                            |
-|------|------------|------------------|----------------------------------|
-| GP0  |            |                  |                                  |
-| GP1  |            |                  |                                  |
-| GP2  |            |                  |                                  |
-| GP3  |            |                  |                                  |
-| GP4  |            |                  |                                  |
-| GP5  |            |                  |                                  |
-| GP6  |            |                  |                                  |
-| GP7  |            |                  |                                  |
-| GP8  |            |                  |                                  |
-| GP9  |            |                  |                                  |
-| GP10 |            |                  |                                  |
-| GP11 |            |                  |                                  |
-| GP12 |            |                  |                                  |
-| GP13 |            |                  |                                  |
-| GP14 |            |                  |                                  |
-| GP15 |            |                  |                                  |
-| GP16 | spi0       | MISO             | Wiznet                           |
-| GP17 |            | CSn              | Wiznet                           |
-| GP18 | spi0       | SCLK             | Wiznet                           |
-| GP19 | spi0       | MOSI             | Wiznet                           |
-| GP20 |            | RSTn             | Wiznet                           |
-| GP21 |            | INTn             | Wiznet                           |
-| GP22 |            |                  |                                  |
-| GP23 |            |                  |                                  |
-| GP24 |            |                  |                                  |
-| GP25 |            |                  |                                  |
-| GP26 |            |                  |                                  |
-| GP27 |            |                  |                                  |
-| GP28 |            |                  |                                  |
+| Pin  | Alt use    | Usage            | Notes                                  |
+|------|------------|------------------|----------------------------------------|
+| GP0  |            |                  |                                        |
+| GP1  |            |                  |                                        |
+| GP2  |            |                  |                                        |
+| GP3  |            |                  |                                        |
+| GP4  |            |                  |                                        |
+| GP5  |            |                  |                                        |
+| GP6  |            |                  |                                        |
+| GP7  |            |                  |                                        |
+| GP8  |            |                  |                                        |
+| GP9  |            |                  |                                        |
+| GP10 |            |                  |                                        |
+| GP11 |            |                  |                                        |
+| GP12 |            |                  |                                        |
+| GP13 |            |                  |                                        |
+| GP14 |            |                  |                                        |
+| GP15 |            |                  |                                        |
+| GP16 | spi0       | MISO             | Wiznet                                 |
+| GP17 |            | CSn              | Wiznet                                 |
+| GP18 | spi0       | SCLK             | Wiznet                                 |
+| GP19 | spi0       | MOSI             | Wiznet                                 |
+| GP20 |            | RSTn             | Wiznet                                 |
+| GP21 |            | INTn             | Wiznet                                 |
+| GP22 |            |                  |                                        |
+| GP23 |            |                  |                                        |
+| GP24 |            |                  |                                        |
+| GP25 |            | On Board LED     |                                        |
+| GP26 |            |                  |                                        |
+| GP27 |            |                  |                                        |
+| GP28 |            |                  |                                        |
+
+# Puzzle Data
+Store Name `template-room:puzzle`
+
+| Key           | Type    | Default          | Notes                            |
+|---------------|---------|------------------|----------------------------------|
+|               |         |                  |                                  |
+
+# Logic
+TODO
