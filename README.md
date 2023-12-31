@@ -1,4 +1,4 @@
-# {{ Your Puzzle Name }} base on Tempus-Pico
+# {{ Your Puzzle Name }} based on Tempus-Pico
 This repo should be cloned with `--recursive` or `git submodule update --init --recursive` should be ran after clone it setup all the submodules
 
 # Template
