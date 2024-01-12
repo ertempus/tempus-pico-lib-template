@@ -219,7 +219,6 @@ void led_toggle() {
 
 void main_task(void *params) {
     printf("Main task: start\n");
-    printf("Main task: start\n");
     TickType_t xLastWakeTime;
     TickType_t xLastWatchdog;
     TickType_t xLastStatsPrint;
@@ -249,7 +248,7 @@ void main_task(void *params) {
         // puzzle_custom_check();
 
         #ifndef NDEBUG
-        print_task_list(xLastWakeTime);
+        // print_task_list(xLastWakeTime);
         #endif
 
         led_toggle();
