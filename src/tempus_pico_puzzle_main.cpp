@@ -37,7 +37,7 @@ static const char *MAIN_TASK_NAME = "MainThread";
 static TaskHandle_t _main_task_handle;
 
 enum puzzle_data_names {
-    PUZZLE_DATA_
+    PUZZLE_DATA_,
 
     PUZZLE_DATA_STORE_SIZE, // keep as last entry for size
 };
@@ -47,7 +47,7 @@ puzzle_data_t puzzle_data_store[PUZZLE_DATA_STORE_SIZE];
 game_state_t _game_state = GAME_STATE_NULL;
 
 typedef enum main_task_flag {
-    MAIN_TASK_FLAG_
+    MAIN_TASK_FLAG_,
 } main_task_flag_t;
 
 /*
@@ -226,10 +226,12 @@ void main_task(void *params) {
     // store_init();
 
     tempus_setup(room_slug, component_name);
+    // vTaskDelay(pdMS_TO_TICKS(500));
 
     led_init();
 
     printf("Main task: Entering loop\n");
+    uint32_t ulNotifiedValue;
     while (true) {
         xTaskNotifyWait(
             0,
