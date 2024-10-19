@@ -235,7 +235,7 @@ void main_task(void *params) {
     while (true) {
         xTaskNotifyWait(
             0,
-            BIT(MAIN_TASK_FLAG_NEW_TAG),
+            ULONG_MAX,
             &ulNotifiedValue,
             (TickType_t) pdMS_TO_TICKS(100));
         xLastWakeTime = xTaskGetTickCount();

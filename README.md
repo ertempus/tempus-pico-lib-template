@@ -58,8 +58,8 @@ picotool load -f src/tempus_pico_puzzle.uf2
 | GP20 |            | RSTn             | Wiznet                                 |
 | GP21 |            | INTn             | Wiznet                                 |
 | GP22 |            |                  |                                        |
-| GP23 |            |                  |                                        |
-| GP24 |            |                  |                                        |
+| GP23 |            | SMPS Power Save  |                                        |
+| GP24 |            | VBUS sense       |                                        |
 | GP25 |            | On Board LED     |                                        |
 | GP26 |            |                  |                                        |
 | GP27 |            |                  |                                        |
