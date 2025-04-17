@@ -14,6 +14,7 @@
 #include "task.h"
 
 #include "lwip/ip4_addr.h"
+#include "lwip/stats.h"
 
 #ifdef RASPBERRYPI_PICO_W
 #include "pico/cyw43_arch.h"
